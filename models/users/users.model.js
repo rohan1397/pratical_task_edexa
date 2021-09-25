@@ -19,13 +19,24 @@ const userSchema = mongoose.Schema(
 			ref: "roles",
 			required: true,
 		},
-		actions: [
-			{
-				type: mongoose.Schema.Types.ObjectID,
-				ref: "actions",
-				required: true,
+		actions: {
+			create: {
+				type: Boolean,
+				default: false,
 			},
-		],
+			update: {
+				type: Boolean,
+				default: false,
+			},
+			delete: {
+				type: Boolean,
+				default: false,
+			},
+			read: {
+				type: Boolean,
+				default: false,
+			},
+		},
 	},
 	{
 		timestamps: true,
