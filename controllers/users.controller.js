@@ -5,7 +5,6 @@ const { authenticatePassword } = require("../helpers/authPassword.js");
 const authenticateUser = require("../helpers/authUser.js");
 const checkPermission = require("../helpers/checkPermission");
 const jwt = require("jsonwebtoken");
-const convertToMongooseObjectID = require("../helpers/convertToObject");
 
 const register = async (req, res) => {
 	try {
